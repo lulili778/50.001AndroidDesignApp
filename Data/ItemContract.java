@@ -1,4 +1,4 @@
-package com.example.lulili.redot.Data;
+package com.example.redspot.Data;
 
 import android.provider.BaseColumns;
 
@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
  * table name, and columns' names.
  */
 public class ItemContract {
-    public static final String DB_NAME = "com.example.lulili.redot.db";
+    public static final String DB_NAME = "com.example.shiping.materialtest.db";
     public static final int DB_VERSION = 1;
     public static final String TABLE = "packing_list";
 
