@@ -25,7 +25,7 @@ import java.util.Map;
 
 
 
-public class ToBringActivity extends AppCompatActivity {
+public class ToEatActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
@@ -40,7 +40,7 @@ public class ToBringActivity extends AppCompatActivity {
         setContentView(R.layout.activity_to_bring);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
-        toolbar.setTitle("Packing List");
+        toolbar.setTitle("Restaurants Suggestions");
         setSupportActionBar(toolbar);
 
         if (ListPackages.rememberBoole != ListPackages.compareBoole) {
@@ -63,11 +63,11 @@ public class ToBringActivity extends AppCompatActivity {
      */
 
     private void initiateItemList() {
-        helper = new ItemDBHelper(ToBringActivity.this);
+        helper = new ItemDBHelper(ToEatActivity.this);
         SQLiteDatabase sqlDB = helper.getWritableDatabase();
         sqlDB.delete(ItemContract.TABLE, null, null);
 
-        for (Map.Entry<String, String[]> entry : (new Sightseeing()).toBringList.entrySet()) {
+        for (Map.Entry<String, String[]> entry : (new Sightseeing()).toEatList.entrySet()) {
             if (Arrays.asList(ListPackages.interestedLocations).contains(entry.getKey()))
                 for (String item : entry.getValue()) {
                     ContentValues values = new ContentValues();
@@ -88,7 +88,7 @@ public class ToBringActivity extends AppCompatActivity {
      */
 
     private void updateUI() {
-        helper = new ItemDBHelper(ToBringActivity.this);
+        helper = new ItemDBHelper(ToEatActivity.this);
         SQLiteDatabase sqlDB = helper.getReadableDatabase();
         Cursor cursor = sqlDB.query(ItemContract.TABLE,
                 new String[]{ItemContract.Columns._ID, ItemContract.Columns.ITEM, ItemContract.Columns.CHECKED},
@@ -118,7 +118,7 @@ public class ToBringActivity extends AppCompatActivity {
      */
 
     private void refreshAdapter() {
-        helper = new ItemDBHelper(ToBringActivity.this);
+        helper = new ItemDBHelper(ToEatActivity.this);
         SQLiteDatabase sqlDB = helper.getReadableDatabase();
         Cursor cursor = sqlDB.query(ItemContract.TABLE,
                 new String[]{ItemContract.Columns._ID, ItemContract.Columns.ITEM, ItemContract.Columns.CHECKED},
@@ -162,7 +162,7 @@ public class ToBringActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String item = inputField.getText().toString();
 
-                        ItemDBHelper helper = new ItemDBHelper(ToBringActivity.this);
+                        ItemDBHelper helper = new ItemDBHelper(ToEatActivity.this);
                         SQLiteDatabase db = helper.getWritableDatabase();
                         ContentValues values = new ContentValues();
 
@@ -198,7 +198,7 @@ public class ToBringActivity extends AppCompatActivity {
                 item);
 
 
-        helper = new ItemDBHelper(ToBringActivity.this);
+        helper = new ItemDBHelper(ToEatActivity.this);
         SQLiteDatabase sqlDB = helper.getWritableDatabase();
         sqlDB.execSQL(sql);
         updateUI();
@@ -234,7 +234,7 @@ public class ToBringActivity extends AppCompatActivity {
         values.put(ItemContract.Columns.CHECKED, checked);
 
         String where = String.format("%s = '%s'", ItemContract.Columns.ITEM, item);
-        helper = new ItemDBHelper(ToBringActivity.this);
+        helper = new ItemDBHelper(ToEatActivity.this);
         SQLiteDatabase sqlDB = helper.getWritableDatabase();
         sqlDB.update(ItemContract.TABLE, values, where, null);
         refreshAdapter();
