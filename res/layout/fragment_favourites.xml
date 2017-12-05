@@ -2,9 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/singapore_nightview"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context=".MainActivity"
+    tools:context="com.example.redspot.MainActivity"
     android:baselineAligned="false">
 
     <TextView
