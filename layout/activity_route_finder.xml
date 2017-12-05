@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/routefinder"
     android:orientation="vertical"
-    tools:context="com.example.shiping.materialtest.RouteFinder"
+    tools:context="com.example.lulili.redot.RouteFinder"
     >
 
 
