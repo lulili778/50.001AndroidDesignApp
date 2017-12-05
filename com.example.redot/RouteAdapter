@@ -1,4 +1,4 @@
-package com.example.lulili.redot;
+package com.example.redspot;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.lulili.redot.R;
-import com.example.lulili.redot.Transportation;
 
 import java.util.ArrayList;
 
