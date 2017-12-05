@@ -1,8 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.lulili.redot.MainActivity"
+    tools:context="com.example.redspot.MainActivity"
     android:paddingTop="?android:attr/actionBarSize">
+
 
 
     <item
@@ -14,4 +15,3 @@
 
 
 </menu>
-m
