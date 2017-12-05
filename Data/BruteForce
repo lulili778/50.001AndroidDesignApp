@@ -1,4 +1,4 @@
-package com.example.shiping.materialtest;
+package com.example.lulili.redot;
 
 import com.example.shiping.materialtest.Data.MapData;
 
@@ -12,22 +12,22 @@ public class BruteForce {
 
     public static ArrayList<String> setPlaces(String[] placeList) {
         HashMap<String, Character> codeNames = new HashMap<String, Character>();
-        codeNames.put("Marina Bay Sands", 'a');
-        codeNames.put("Singapore Flyer", 'b');
-        codeNames.put("Vivo City", 'c');
-        codeNames.put("Resorts World Sentosa", 'd');
-        codeNames.put("Buddha Tooth Relic Temple", 'e');
-        codeNames.put("Zoo", 'f');
-        codeNames.put("Botanic Gardens", 'g');
-        codeNames.put("Peranakan Museum", 'h');
-        codeNames.put("ION Orchard", 'i');
+        codeNames.put("Marina Bay Sands", 'ma');
+        codeNames.put("Singapore Flyer", 'af');
+        codeNames.put("Vivo City", 'vc');
+        codeNames.put("Resorts World Sentosa", 'rws');
+        codeNames.put("Buddha Tooth Relic Temple", 'btrt');
+        codeNames.put("Zoo", 'z');
+        codeNames.put("Botanic Gardens", 'bg');
+        codeNames.put("Peranakan Museum", 'pm');
+        codeNames.put("ION Orchard", 'io');
 
         String places = "";
         for (String temp : placeList) {
             places += String.valueOf(codeNames.get(temp));
         }
         ArrayList<String> output = new ArrayList<String>();
-        permutation(output, "a", places, "a"); // permute and append the hotel 'a' at the front and back
+        permutation(output, "ma", places, "ma"); // permute and append the hotel 'ma' at the front and back
         return output;
     }
 
@@ -159,15 +159,15 @@ public class BruteForce {
     // return a string array of the optimal route (places to visit in order)
     public static String[] getOptimalRoute(String[] solution) {
         HashMap<Character, String> codeNames = new HashMap<Character, String>();
-        codeNames.put('a', "Marina Bay Sands");
-        codeNames.put('b', "Singapore Flyer");
-        codeNames.put('c', "Vivo City");
-        codeNames.put('d', "Resorts World Sentosa");
-        codeNames.put('e', "Buddha Tooth Relic Temple");
-        codeNames.put('f', "Zoo");
-        codeNames.put('g', "Botanic Gardens");
-        codeNames.put('h', "Peranakan Museum");
-        codeNames.put('i', "ION Orchard");
+        codeNames.put('ma', "Marina Bay Sands");
+        codeNames.put('sf', "Singapore Flyer");
+        codeNames.put('vc', "Vivo City");
+        codeNames.put('rws', "Resorts World Sentosa");
+        codeNames.put('btrt', "Buddha Tooth Relic Temple");
+        codeNames.put('z', "Zoo");
+        codeNames.put('bg', "Botanic Gardens");
+        codeNames.put('pm', "Peranakan Museum");
+        codeNames.put('io', "ION Orchard");
 
         char[] output = new char[solution[1].length() + 1];
         String[] places = new String[solution[1].length() + 1];
@@ -176,7 +176,7 @@ public class BruteForce {
             output[count] = solution[0].charAt(i);
             count++;
         }
-        output[solution[1].length()] = 'a';
+        output[solution[1].length()] = 'ma';
         for (int j = 0; j < output.length; j++) {
             places[j] = codeNames.get(output[j]);
         }
