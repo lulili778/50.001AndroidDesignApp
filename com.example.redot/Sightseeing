@@ -1,4 +1,4 @@
-package com.example.lulili.redot;
+package com.example.redspot;
 
 import java.util.HashMap;
 
@@ -19,8 +19,6 @@ public class Sightseeing {
      */
 
     public Sightseeing() {
-        toDoList.put("Peranakan Museum", "http://www.yoursingapore.com/see-do-singapore/culture-heritage/heritage-discovery/peranakan-museum.html");
-        toDoList.put("ION Orchard","http://www.yoursingapore.com/see-do-singapore/places-to-see/orchard.html");
         toDoList.put("Marina Bay Sands", "http://www.yoursingapore.com/see-do-singapore/recreation-leisure/resorts/marina-bay-sands.html");
         toDoList.put("Singapore Flyer", "http://www.yoursingapore.com/see-do-singapore/recreation-leisure/viewpoints/singapore-flyer.html");
         toDoList.put("Buddha Tooth Relic Temple", "http://www.yoursingapore.com/see-do-singapore/culture-heritage/places-of-worship/buddha-tooth-relic-temple-museum.html");
@@ -28,7 +26,8 @@ public class Sightseeing {
         toDoList.put("Resorts World Sentosa","http://www.yoursingapore.com/see-do-singapore/recreation-leisure/resorts/resorts-world-sentosa.html");
         toDoList.put("Zoo","http://www.yoursingapore.com/see-do-singapore/nature-wildlife/fun-with-animals/singapore-zoo.html");
         toDoList.put("Botanic Gardens","http://www.yoursingapore.com/see-do-singapore/nature-wildlife/parks-gardens/singapore-botanic-gardens.html");
-        
+        toDoList.put("Peranakan Museum", "http://www.yoursingapore.com/see-do-singapore/culture-heritage/heritage-discovery/peranakan-museum.html");
+        toDoList.put("ION Orchard","http://www.yoursingapore.com/see-do-singapore/places-to-see/orchard.html");
 
 
 
