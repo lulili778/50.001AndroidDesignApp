@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.shiping.materialtest.MainActivity">
+        tools:context="com.example.redspot.MainActivity">
 
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
 
-        <com.example.shiping.materialtest.SlidingTabLayout
+        <com.example.redspot.SlidingTabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
