@@ -1,6 +1,6 @@
-package com.example.lulili.redot;
+package com.example.redspot.Algo;
 
-import com.example.lulili.redot.Data.MapData;
+import com.example.redspot.Data.MapData;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -159,15 +159,15 @@ public class BruteForce {
     // return a string array of the optimal route (places to visit in order)
     public static String[] getOptimalRoute(String[] solution) {
         HashMap<Character, String> codeNames = new HashMap<Character, String>();
-        codeNames.put('ma', "Marina Bay Sands");
-        codeNames.put('sf', "Singapore Flyer");
-        codeNames.put('vc', "Vivo City");
-        codeNames.put('rws', "Resorts World Sentosa");
-        codeNames.put('btrt', "Buddha Tooth Relic Temple");
-        codeNames.put('z', "Zoo");
-        codeNames.put('bg', "Botanic Gardens");
-        codeNames.put('pm', "Peranakan Museum");
-        codeNames.put('io', "ION Orchard");
+        codeNames.put('a', "Marina Bay Sands");
+        codeNames.put('b', "Singapore Flyer");
+        codeNames.put('c', "Vivo City");
+        codeNames.put('d', "Resorts World Sentosa");
+        codeNames.put('e', "Buddha Tooth Relic Temple");
+        codeNames.put('f', "Zoo");
+        codeNames.put('g', "Botanic Gardens");
+        codeNames.put('h', "Peranakan Museum");
+        codeNames.put('i', "ION Orchard");
 
         char[] output = new char[solution[1].length() + 1];
         String[] places = new String[solution[1].length() + 1];
@@ -176,7 +176,7 @@ public class BruteForce {
             output[count] = solution[0].charAt(i);
             count++;
         }
-        output[solution[1].length()] = 'ma';
+        output[solution[1].length()] = 'a';
         for (int j = 0; j < output.length; j++) {
             places[j] = codeNames.get(output[j]);
         }
