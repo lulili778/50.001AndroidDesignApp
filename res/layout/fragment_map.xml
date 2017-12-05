@@ -54,7 +54,7 @@
             android:textSize="17sp"
             android:layout_height="wrap_content"
             android:id="@+id/taxi_legend"
-            android:textColor="#0F0"
+            android:textColor="#88c188"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="\u2014" />
@@ -63,7 +63,7 @@
             android:textSize="17sp"
             android:layout_height="wrap_content"
             android:id="@+id/taxi_legend2"
-            android:textColor="#EEE"
+            android:textColor="#d9d9d9"
             android:paddingEnd="10dp"
             android:text="Taxi" />
 
@@ -72,7 +72,7 @@
             android:textSize="17sp"
             android:layout_height="wrap_content"
             android:id="@+id/public_legend"
-            android:textColor="#F00"
+            android:textColor="#af3e3e"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="\u2014" />
@@ -90,7 +90,7 @@
             android:textSize="17sp"
             android:layout_height="wrap_content"
             android:id="@+id/walk_legend"
-            android:textColor="#00F"
+            android:textColor="#6376e1"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="\u2014" />
