@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.lulili.redot.RouteIcon"
+    tools:context="com.example.redspot.RouteIcon"
     android:weightSum="1">
 
 <LinearLayout
@@ -14,38 +14,7 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/slowAlgo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="6"
-                android:checked="true"
-                android:onClick="onRadioButtonClicked"
-                android:text="Brute Force" />
-
-            <RadioButton
-                android:id="@+id/fastAlgo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="6"
-                android:onClick="onRadioButtonClicked"
-                android:text="Fast Solver" />
-        </RadioGroup>
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Budget: S$"
+            android:text="My Budget: S$"
             android:id="@+id/textView2"
             android:textColor="#FFFFFF" />
 
@@ -79,16 +48,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:textSize="17sp"
-        android:text="Where would you like to go today?"
+        android:text="Where to go?"
         android:id="@+id/textView3"
         android:textColor="#FFFFFF"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Your hotel is Marina Bay Sands Hotel."
-        android:id="@+id/textView4"
-        android:textColor="#BCBCBC"/>
 
 
     <LinearLayout
@@ -316,17 +278,47 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/slowAlgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="6"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="Brute Force" />
+
+            <RadioButton
+                android:id="@+id/fastAlgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="6"
+                android:onClick="onRadioButtonClicked"
+                android:text="Fast Solver" />
+        </RadioGroup>
+    </LinearLayout>
 
     <Button
+        android:id="@+id/function1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Get Route!"
-        android:id="@+id/function1"
         android:layout_gravity="center_horizontal"
-        android:onClick="FindRouteActivate"
         android:layout_marginBottom="10dp"
-        />
+        android:layout_marginTop="10dp"
+        android:onClick="FindRouteActivate"
+        android:text="Go" />
 </LinearLayout>
 </ScrollView>
