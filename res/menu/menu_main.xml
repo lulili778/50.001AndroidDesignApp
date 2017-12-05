@@ -13,5 +13,12 @@
         android:icon="@drawable/ic_info"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/thingsToEat"
+        android:title="@string/things_to_eat"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_assignment_turned_in"
+        app:showAsAction="ifRoom" />
+
 
 </menu>
