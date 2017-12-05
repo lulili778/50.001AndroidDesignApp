@@ -19,9 +19,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
-import com.example.redspot.Algo.BruteForce;
 import com.example.redspot.Algo.FastSolver;
+import com.example.redspot.Algo.BruteForce;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -99,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        if (id == R.id.thingsToEat) {                             //  IMPLEMENT PACKING LIST ACTIVITY
+            startActivity(new Intent(this, ToEatActivity.class));
+            overridePendingTransition(R.anim.animation_enter_right, R.anim.animation_exit_left);
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -112,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /** Defines MyPagerAdapter which extends FragmentStatePagerAdapter. This class chooses the right fragment
+     * to display on the screen. FragmentStatePagerAdapter remembers the previous state of the fragment
+     * after it has been created already. This is in contrast to FragmentPagerAdapter which destroys the
+     * fragments after they have been swiped away. **/
+
     class MyPagerAdapter extends FragmentStatePagerAdapter {
 
         int icons[] = {R.drawable.ic_directions, R.drawable.ic_place, R.drawable.ic_favorite}; // Icons for display on tabs
@@ -122,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
             tabText = getResources().getStringArray(R.array.tabs);
         }
 
+        /** Chooses the fragment to display.
+         * This method getItem is called within the FragmentStatePagerAdapter class. **/
 
         @Override
         public Fragment getItem(int position) {
@@ -231,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
             String[] result;
             if (!fastSolver.isChecked() && placesToVisit.size() >= 7) {
-                Toast.makeText(MainActivity.this, "The app will crash if places are more than 7", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "AINT NOBODY GOT TIEM FOR THAT", Toast.LENGTH_SHORT).show();
             } else {
                 if (fastSolver.isChecked()) {
                     result = BruteForce.calcCostTime((FastSolver.generateRouteTSP(placesToVisitX)), budget);
