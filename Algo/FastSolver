@@ -1,6 +1,6 @@
-package com.example.lulili.redot;
+package com.example.redspot.Algo;
 
-import com.example.lulili.redot.Data.MapData;
+import com.example.redspot.Data.MapData;
 
 import java.util.ArrayList;
 import java.util.HashMap;
