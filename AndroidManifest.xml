@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lulili.redot" >
+    package="com.example.redspot" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.redspot.MainActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,23 +28,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ToBringActivity"
+            android:name="com.example.redspot.ToBringActivity"
             android:label="@string/title_activity_to_bring" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.redspot.MainActivity" />
         </activity>
-        <activity android:name=".Attractions" >
+        <activity android:name="com.example.redspot.Attractions" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.redspot.MainActivity" />
         </activity>
         <activity
-            android:name=".RouteFinder"
+            android:name="com.example.redspot.RouteFinder"
             android:label="@string/title_activity_route_finder">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.redspot.MainActivity" />
         </activity>
 
         <meta-data
