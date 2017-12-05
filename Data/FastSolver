@@ -11,15 +11,15 @@ public class FastSolver {
     public static ArrayList<ArrayList<String>> generateRouteTSP(String[] placeList) {
         HashMap<String, double[]> data = MapData.createData();
         HashMap<String, Character> codeNames = new HashMap<String, Character>();
-        codeNames.put("Marina Bay Sands", 'ma');
-        codeNames.put("Singapore Flyer", 'sf');
-        codeNames.put("Vivo City", 'vc');
-        codeNames.put("Resorts World Sentosa", 'rws');
-        codeNames.put("Buddha Tooth Relic Temple", 'btrt');
-        codeNames.put("Zoo", 'z');
-        codeNames.put("Botanic Gardens", 'bg');
-        codeNames.put("Peranakan Museum", 'pm');
-        codeNames.put("ION Orchard", 'io');
+        codeNames.put("Marina Bay Sands", 'a');
+        codeNames.put("Singapore Flyer", 'b');
+        codeNames.put("Vivo City", 'c');
+        codeNames.put("Resorts World Sentosa", 'd');
+        codeNames.put("Buddha Tooth Relic Temple", 'e');
+        codeNames.put("Zoo", 'f');
+        codeNames.put("Botanic Gardens", 'g');
+        codeNames.put("Peranakan Museum", 'h');
+        codeNames.put("ION Orchard", 'i');
 
 
         ArrayList<String> route = new ArrayList<String>();
@@ -51,7 +51,7 @@ public class FastSolver {
             route.add(minSubroute);
             places = places.substring(0, pointer) + places.substring(pointer + 1);
         }
-        route.add(String.valueOf(route.get(placeNumber - 1).charAt(1)) + "ma");
+        route.add(String.valueOf(route.get(placeNumber - 1).charAt(1)) + "a");
         ArrayList<ArrayList<String>> output = new ArrayList<ArrayList<String>>();
         output.add(route);
 
