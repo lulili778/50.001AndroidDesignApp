@@ -1,4 +1,4 @@
-package com.example.lulili.redot 
+package com.example.lulili.redot;
 
 import android.os.Bundle;
 import com.google.android.gms.maps.CameraUpdateFactory;
