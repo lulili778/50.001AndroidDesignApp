@@ -23,7 +23,6 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_navigation_drawer_fragment">NavigationDrawerFragment</string>
     <string name="help">Help</string>
-    <string name="weather">Weather Forecast</string>
     <string name="things_to_bring">Things to bring</string>
 
     <string-array name="tabs">
@@ -33,9 +32,6 @@
     </string-array>
     <string name="title_activity_help">HelpActivity</string>
     <string name="title_activity_to_bring">ToBringActivity</string>
-
-
-    <string name="place_not_found">Sorry, no weather data found.</string>
     <string name="title_activity_route_finder">RouteFinder</string>
 
     <string name="get_to_know_attractions">Get to know your attractions</string>
