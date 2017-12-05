@@ -1,6 +1,6 @@
 package com.example.lulili.redot;
 
-import com.example.shiping.materialtest.Data.MapData;
+import com.example.lulili.redot.Data.MapData;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,22 +12,22 @@ public class BruteForce {
 
     public static ArrayList<String> setPlaces(String[] placeList) {
         HashMap<String, Character> codeNames = new HashMap<String, Character>();
-        codeNames.put("Marina Bay Sands", 'ma');
-        codeNames.put("Singapore Flyer", 'af');
-        codeNames.put("Vivo City", 'vc');
-        codeNames.put("Resorts World Sentosa", 'rws');
-        codeNames.put("Buddha Tooth Relic Temple", 'btrt');
-        codeNames.put("Zoo", 'z');
-        codeNames.put("Botanic Gardens", 'bg');
-        codeNames.put("Peranakan Museum", 'pm');
-        codeNames.put("ION Orchard", 'io');
+        codeNames.put("Marina Bay Sands", 'a');
+        codeNames.put("Singapore Flyer", 'b');
+        codeNames.put("Vivo City", 'c');
+        codeNames.put("Resorts World Sentosa", 'd');
+        codeNames.put("Buddha Tooth Relic Temple", 'e');
+        codeNames.put("Zoo", 'f');
+        codeNames.put("Botanic Gardens", 'g');
+        codeNames.put("Peranakan Museum", 'h');
+        codeNames.put("ION Orchard", 'i');
 
         String places = "";
         for (String temp : placeList) {
             places += String.valueOf(codeNames.get(temp));
         }
         ArrayList<String> output = new ArrayList<String>();
-        permutation(output, "ma", places, "ma"); // permute and append the hotel 'ma' at the front and back
+        permutation(output, "a", places, "a"); // permute and append the hotel 'a' at the front and back
         return output;
     }
 
